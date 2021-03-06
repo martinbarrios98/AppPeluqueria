@@ -1,0 +1,53 @@
+.seccion{
+    display: none;
+    margin: $separacion/2 0;
+    &.mostrar-seccion{
+        display: block;
+    }
+    p{
+        margin: 1rem 0;
+    }
+}
+
+.paginacion{
+    button{
+        border: none;
+        background-color: $azul;
+        padding: $separacion/4;
+        text-align: c;
+        color: $blanco;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: $bold;
+    }
+}
+
+.listado-servicios{
+    @include tablet{
+        @include grid(2, $separacion/4);
+    }
+    .servicio{
+        background-color: $blanco;
+        border-radius: 1rem;
+        padding: $separacion/4;
+        margin: $separacion/4 0;
+        transition: all .3s ease-in-out;
+        @include tablet{
+            margin: 0;
+        }
+        .nombre-servicio{
+            color: $negro;
+        }
+        .precio-servicio{
+            color: $azul;
+            font-size: 3rem;
+            font-weight: $bold;
+        }
+        &.seleccionado{
+            background-color: $azul;
+            p{
+                color: $blanco;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+body{
+    background-color:  $negro;
+}
+.contenedor-estetica{
+    height: 100vh;
+    @include tablet{
+        @include grid (2, $separacion/3);
+    }
+    .imagen{
+        background-image: url(../../build/img/1.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30rem;
+        @include tablet{
+            height: auto;
+        }
+    }
+}
+
+.app{
+    width: 95%;
+    margin: 0 auto;
+    padding: $separacion/3 0;
+    .tabs{
+        @include grid (3,$separacion/3);
+        button{
+            font-size: 1.2rem;
+            background-color: $blanco;
+            border: none;
+            font-weight: $bold;
+            text-align: center;
+            padding: $separacion/5;
+            cursor: pointer;
+            text-transform: uppercase;
+            @include desktop {
+                font-size: 1.5rem;
+            }
+        }
+        .tab-actual{
+            background-color: $azul;
+            color: $blanco;
+        }
+    }
+}
